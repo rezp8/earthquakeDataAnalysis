@@ -1,26 +1,26 @@
-﻿Magnitude,Place,DateTime_UTC,Depth_km,Latitude,Longitude,Dist_to_Tokyo_km,Event_ID,Month,Category,Region
-4.6,"Southeast of Honshu, Japan",2025-10-14 23:29:10,442.0,30.41,138.27,599.54,gfz2025ueij,October,Moderate,Southeast of Honshu
-4.8,"Near West Coast of Honshu, Japan",2025-10-14 03:34:24,10.0,39.66,139.42,443.42,gfz2025ucuy,October,Moderate,Near West Coast of Honshu
-4.7,"Near East Coast of Honshu, Japan",2025-10-13 03:25:47,63.0,38.66,142.42,412.63,gfz2025uaze,October,Moderate,Near East Coast of Honshu
-4.8,"Ryukyu Islands, Japan",2025-10-11 14:24:22,86.0,27.17,127.7,1474.49,gfz2025tydw,October,Moderate,Ryukyu Islands
-4.8,"Southeast of Honshu, Japan",2025-10-11 03:22:02,445.0,30.39,138.44,598.53,gfz2025txia,October,Moderate,Southeast of Honshu
-5.3,"Ryukyu Islands, Japan",2025-10-07 21:38:38,10.0,29.34,129.1,1213.31,gfz2025trkf,October,Moderate,Ryukyu Islands
-4.8,"Off East Coast of Honshu, Japan",2025-10-07 01:17:17,10.0,37.77,144.19,466.74,gfz2025tpvx,October,Moderate,Off East Coast of Honshu
-5.1,"Near East Coast of Honshu, Japan",2025-10-07 00:30:25,53.0,37.58,141.27,256.32,gfz2025tpuj,October,Moderate,Near East Coast of Honshu
-4.5,"Bonin Islands, Japan Region",2025-10-06 20:02:44,461.0,27.19,140.39,946.24,gfz2025tpln,October,Moderate,Bonin Islands
-4.7,"Off East Coast of Honshu, Japan",2025-10-06 18:25:05,10.0,37.69,144.21,464.11,gfz2025tpii,October,Moderate,Off East Coast of Honshu
-5.0,"Off East Coast of Honshu, Japan",2025-10-06 14:58:00,10.0,37.7,144.16,460.73,gfz2025tpbm,October,Moderate,Off East Coast of Honshu
-4.9,"Off East Coast of Honshu, Japan",2025-10-06 14:20:25,10.0,37.7,144.19,463.07,gfz2025tpag,October,Moderate,Off East Coast of Honshu
-4.7,"Near East Coast of Honshu, Japan",2025-10-03 03:48:03,103.0,35.51,140.04,39.82,gfz2025tisw,October,Moderate,Near East Coast of Honshu
-4.8,"Near East Coast of Honshu, Japan",2025-10-04 14:15:19,41.0,39.71,142.16,499.88,gfz2025tljb,October,Moderate,Near East Coast of Honshu
-4.8,"Near East Coast of Honshu, Japan",2025-10-01 14:50:06,60.0,38.76,141.98,400.13,gfz2025tfxs,October,Moderate,Near East Coast of Honshu
-4.6,"Off East Coast of Honshu, Japan",2025-10-01 17:40:51,10.0,37.81,144.12,463.51,gfz2025tgdi,October,Moderate,Off East Coast of Honshu
-4.7,"Off East Coast of Honshu, Japan",2025-09-28 01:36:38,10.0,37.7,144.17,461.51,gfz2025szla,September,Moderate,Off East Coast of Honshu
-4.8,"Southwestern Ryukyu Islands, Japan",2025-09-28 21:23:51,58.0,24.34,123.31,2010.98,gfz2025taye,September,Moderate,Southwestern Ryukyu Islands
-4.2,"Near East Coast of Honshu, Japan",2025-09-24 18:03:16,54.0,38.92,142.14,422.56,gfz2025stjo,September,Moderate,Near East Coast of Honshu
-4.8,"Off East Coast of Honshu, Japan",2025-09-27 13:37:19,10.0,37.79,144.14,463.96,gfz2025synh,September,Moderate,Off East Coast of Honshu
-4.9,"Ryukyu Islands, Japan",2025-09-20 04:46:35,10.0,24.11,126.12,1828.07,gfz2025slbg,September,Moderate,Ryukyu Islands
-4.8,"Ryukyu Islands, Japan",2025-09-23 17:08:13,133.0,28.89,128.73,1272.64,gfz2025srmg,September,Moderate,Ryukyu Islands
-5.0,"Ryukyu Islands, Japan",2025-09-17 12:55:07,33.0,29.6,129.71,1149.07,gfz2025sgew,September,Moderate,Ryukyu Islands
-4.6,"Ryukyu Islands, Japan",2025-09-17 13:00:34,52.0,29.42,129.93,1145.25,gfz2025sgfb,September,Moderate,Ryukyu Islands
-4.8,"Near East Coast of Honshu, Japan",2025-09-15 04:34:46,50.0,38.41,142.11,374.21,gfz2025sbxj,September,Moderate,Near East Coast of Honshu
+﻿Magnitude,Place,DateTime_UTC,Depth_km,Latitude,Longitude,Dist_to_Tokyo_km,Event_ID,Month,Category,Region,Data_source
+4.6,"Southeast of Honshu, Japan",2025-10-14 23:29:10,442.0,30.41,138.27,599.54,gfz2025ueij,October,Moderate,Southeast of Honshu,GEOFON
+4.8,"Near West Coast of Honshu, Japan",2025-10-14 03:34:24,10.0,39.66,139.42,443.42,gfz2025ucuy,October,Moderate,Near West Coast of Honshu,GEOFON
+4.7,"Near East Coast of Honshu, Japan",2025-10-13 03:25:47,63.0,38.66,142.42,412.63,gfz2025uaze,October,Moderate,Near East Coast of Honshu,GEOFON
+4.8,"Ryukyu Islands, Japan",2025-10-11 14:24:22,86.0,27.17,127.7,1474.49,gfz2025tydw,October,Moderate,Ryukyu Islands,GEOFON
+4.8,"Southeast of Honshu, Japan",2025-10-11 03:22:02,445.0,30.39,138.44,598.53,gfz2025txia,October,Moderate,Southeast of Honshu,GEOFON
+5.3,"Ryukyu Islands, Japan",2025-10-07 21:38:38,10.0,29.34,129.1,1213.31,gfz2025trkf,October,Moderate,Ryukyu Islands,GEOFON
+4.8,"Off East Coast of Honshu, Japan",2025-10-07 01:17:17,10.0,37.77,144.19,466.74,gfz2025tpvx,October,Moderate,Off East Coast of Honshu,GEOFON
+5.1,"Near East Coast of Honshu, Japan",2025-10-07 00:30:25,53.0,37.58,141.27,256.32,gfz2025tpuj,October,Moderate,Near East Coast of Honshu,GEOFON
+4.5,"Bonin Islands, Japan Region",2025-10-06 20:02:44,461.0,27.19,140.39,946.24,gfz2025tpln,October,Moderate,Bonin Islands,GEOFON
+4.7,"Off East Coast of Honshu, Japan",2025-10-06 18:25:05,10.0,37.69,144.21,464.11,gfz2025tpii,October,Moderate,Off East Coast of Honshu,GEOFON
+5.0,"Off East Coast of Honshu, Japan",2025-10-06 14:58:00,10.0,37.7,144.16,460.73,gfz2025tpbm,October,Moderate,Off East Coast of Honshu,GEOFON
+4.9,"Off East Coast of Honshu, Japan",2025-10-06 14:20:25,10.0,37.7,144.19,463.07,gfz2025tpag,October,Moderate,Off East Coast of Honshu,GEOFON
+4.7,"Near East Coast of Honshu, Japan",2025-10-03 03:48:03,103.0,35.51,140.04,39.82,gfz2025tisw,October,Moderate,Near East Coast of Honshu,GEOFON
+4.8,"Near East Coast of Honshu, Japan",2025-10-04 14:15:19,41.0,39.71,142.16,499.88,gfz2025tljb,October,Moderate,Near East Coast of Honshu,GEOFON
+4.8,"Near East Coast of Honshu, Japan",2025-10-01 14:50:06,60.0,38.76,141.98,400.13,gfz2025tfxs,October,Moderate,Near East Coast of Honshu,GEOFON
+4.6,"Off East Coast of Honshu, Japan",2025-10-01 17:40:51,10.0,37.81,144.12,463.51,gfz2025tgdi,October,Moderate,Off East Coast of Honshu,GEOFON
+4.7,"Off East Coast of Honshu, Japan",2025-09-28 01:36:38,10.0,37.7,144.17,461.51,gfz2025szla,September,Moderate,Off East Coast of Honshu,GEOFON
+4.8,"Southwestern Ryukyu Islands, Japan",2025-09-28 21:23:51,58.0,24.34,123.31,2010.98,gfz2025taye,September,Moderate,Southwestern Ryukyu Islands,GEOFON
+4.2,"Near East Coast of Honshu, Japan",2025-09-24 18:03:16,54.0,38.92,142.14,422.56,gfz2025stjo,September,Moderate,Near East Coast of Honshu,GEOFON
+4.8,"Off East Coast of Honshu, Japan",2025-09-27 13:37:19,10.0,37.79,144.14,463.96,gfz2025synh,September,Moderate,Off East Coast of Honshu,GEOFON
+4.9,"Ryukyu Islands, Japan",2025-09-20 04:46:35,10.0,24.11,126.12,1828.07,gfz2025slbg,September,Moderate,Ryukyu Islands,GEOFON
+4.8,"Ryukyu Islands, Japan",2025-09-23 17:08:13,133.0,28.89,128.73,1272.64,gfz2025srmg,September,Moderate,Ryukyu Islands,GEOFON
+5.0,"Ryukyu Islands, Japan",2025-09-17 12:55:07,33.0,29.6,129.71,1149.07,gfz2025sgew,September,Moderate,Ryukyu Islands,GEOFON
+4.6,"Ryukyu Islands, Japan",2025-09-17 13:00:34,52.0,29.42,129.93,1145.25,gfz2025sgfb,September,Moderate,Ryukyu Islands,GEOFON
+4.8,"Near East Coast of Honshu, Japan",2025-09-15 04:34:46,50.0,38.41,142.11,374.21,gfz2025sbxj,September,Moderate,Near East Coast of Honshu,GEOFON
