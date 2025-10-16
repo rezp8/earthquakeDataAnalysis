@@ -20,7 +20,7 @@ time.sleep(3)
 start_date = driver.find_element(By.ID, "datemin")
 start_date.send_keys("15/09/2025")
 end_date = driver.find_element(By.ID, "datemax")
-end_date.send_keys("12/10/2025")
+end_date.send_keys("14/10/2025")
 lat_min = driver.find_element(By.ID, "latmin")
 lat_min.send_keys("24")
 lat_max = driver.find_element(By.ID, "latmax")
@@ -68,12 +68,14 @@ try:
         next_page_button = driver.find_element(
             By.CSS_SELECTOR, "div.spes.spes1.pag")
         next_page_button.click()
-        time.sleep(6)
+        time.sleep(10)
 except:
     print("This was the last page")
 
-print(len(all_rows_info))
-# print(all_rows_info[-1])
+print(f"Details of {len(all_rows_info)} events were successfully extracted")
+print(f"First event: {all_rows_info[-1]}")
+print(f"Last event: {all_rows_info[0]}")
+
 
 time.sleep(2)
 earthquakes_table = pd.DataFrame(all_rows_info)
