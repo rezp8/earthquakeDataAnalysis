@@ -1,6 +1,7 @@
 import unittest
 from EMSC_webscraping import webscraping_selenium
 from GEOFON_webscraping import fetch_earthquake_data
+import utils
 from io import StringIO
 import requests
 from API_saving import api_saving
@@ -45,6 +46,20 @@ class Test(unittest.TestCase):
         self.assertEqual(
             api_count, local_count,
             f"Our search included {api_count} events but only {local_count} have been extracted.")
+
+    def test_no_missing_values(self):
+        df = pd.DataFrame(
+            {"data_source": ["EMSC", "EMSC", "EMSC", "EMSC"], "magnitude_value": ["4", "4.5", "2.3", "0"]})
+        expected = {"data_source": 0, "magnitude_value": 0}
+        result = utils.count_missing_values(df)
+        self.assertEqual(result, expected)
+
+    def test_some_missing_values(self):
+        df = pd.DataFrame(
+            {"data_source": ["EMSC", None, "EMSC", "EMSC"], "magnitude_value": [None, "4.5", None, "0"]})
+        expected = {"data_source": 1, "magnitude_value": 2}
+        result = utils.count_missing_values(df)
+        self.assertEqual(result, expected)
 
 
 if __name__ == '__main__':
