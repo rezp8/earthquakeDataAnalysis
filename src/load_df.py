@@ -1,7 +1,6 @@
 import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
-import os
 from columns_map import RENAME_MAP as rename_map
 
 df = pd.read_csv("src/df/JAPAN_USGS_cleaned.csv")
