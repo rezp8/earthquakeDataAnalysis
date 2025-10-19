@@ -1,4 +1,6 @@
 Magnitude,Region,DateTime_UTC,Depth_km,Latitude,Longitude,Event_ID
+5.2,"Southeast of Honshu, Japan",2025-10-17 20:28:15,416,29.84,139.06,gfz2025ujox
+4.5,"Eastern Honshu, Japan",2025-10-15 08:50:24,70,38.81,140.84,gfz2025ufaw
 4.6,"Southeast of Honshu, Japan",2025-10-14 23:29:10,442,30.41,138.27,gfz2025ueij
 4.8,"Near West Coast of Honshu, Japan",2025-10-14 03:34:24,10,39.66,139.42,gfz2025ucuy
 4.7,"Near East Coast of Honshu, Japan",2025-10-13 03:25:47,63,38.66,142.42,gfz2025uaze

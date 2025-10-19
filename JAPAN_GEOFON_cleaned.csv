@@ -1,4 +1,6 @@
 ﻿Magnitude,Place,DateTime_UTC,Depth_km,Latitude,Longitude,Dist_to_Tokyo_km,Event_ID,Month,Category,Region,Data_source
+5.2,"Southeast of Honshu, Japan",2025-10-17 20:28:15,416.0,29.84,139.06,651.31,gfz2025ujox,October,Moderate,Southeast of Honshu,GEOFON
+4.5,"Eastern Honshu, Japan",2025-10-15 08:50:24,70.0,38.81,140.84,364.0,gfz2025ufaw,October,Moderate,Eastern Honshu,GEOFON
 4.6,"Southeast of Honshu, Japan",2025-10-14 23:29:10,442.0,30.41,138.27,599.54,gfz2025ueij,October,Moderate,Southeast of Honshu,GEOFON
 4.8,"Near West Coast of Honshu, Japan",2025-10-14 03:34:24,10.0,39.66,139.42,443.42,gfz2025ucuy,October,Moderate,Near West Coast of Honshu,GEOFON
 4.7,"Near East Coast of Honshu, Japan",2025-10-13 03:25:47,63.0,38.66,142.42,412.63,gfz2025uaze,October,Moderate,Near East Coast of Honshu,GEOFON
