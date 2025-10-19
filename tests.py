@@ -1,8 +1,6 @@
 import unittest
 from EMSC_webscraping import webscraping_selenium
 from GEOFON_webscraping import fetch_earthquake_data
-from io import StringIO
-import requests
 from API_saving import api_saving
 import pandas as pd
 import numpy as np
