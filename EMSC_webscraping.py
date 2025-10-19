@@ -35,7 +35,7 @@ def webscraping_selenium():
     start_date = driver.find_element(By.ID, "datemin")
     start_date.send_keys("15/09/2025")
     end_date = driver.find_element(By.ID, "datemax")
-    end_date.send_keys("14/10/2025")
+    end_date.send_keys("19/10/2025")
     lat_min = driver.find_element(By.ID, "latmin")
     lat_min.send_keys("24")
     lat_max = driver.find_element(By.ID, "latmax")
@@ -49,10 +49,10 @@ def webscraping_selenium():
     search_button = driver.find_element(By.CSS_SELECTOR, "input[value=Search]")
     search_button.click()
 
-    # Get number of events based on the fields we defined. We need this for unittest.
+    # Get number of events based on our filters. We need this for unittest.
     time.sleep(2)
     results_count = driver.find_element(By.CSS_SELECTOR, "div[id=nbres]")
-    events_count = int(results_count.text.split()[1])
+    total_events_count = int(results_count.text.split()[1])
 
     time.sleep(2)
     magnitude_expand_button = driver.find_element(
@@ -67,7 +67,9 @@ def webscraping_selenium():
                 By.CSS_SELECTOR, "table.eqs.table-scroll")
             data_rows = data_table.find_elements(By.TAG_NAME, "tr")[1:]
             for row in data_rows:
-                date_time = row.find_element(By.CLASS_NAME, "tbdat").text
+                date_time = row.find_element(
+                    By.CLASS_NAME, "tbdat").text.split()[0:2]
+                date_time = " ".join(date_time)
                 latitude_deg = row.find_element(By.CLASS_NAME, "tblat").text
                 longitude_deg = row.find_element(By.CLASS_NAME, "tblon").text
                 depth_km = row.find_element(By.CLASS_NAME, "tbdep").text
@@ -89,7 +91,7 @@ def webscraping_selenium():
 
     extracted_events_count = len(all_rows_info)
     print(
-        f"A total of {extracted_events_count} have been extracted successfully.")
+        f"A total of {extracted_events_count} records have been extracted successfully.")
 
     time.sleep(2)
     earthquakes_table = pd.DataFrame(all_rows_info)
@@ -98,7 +100,7 @@ def webscraping_selenium():
 
     driver.quit()
 
-    return events_count, extracted_events_count
+    return total_events_count, extracted_events_count
 
 
 if __name__ == "__main__":
