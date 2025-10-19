@@ -25,9 +25,9 @@ This project aims to collect, clean, analyze, and visualize earthquake data from
 
 ---
 
-## 🧠 Project Workflow
+##  Project Workflow
 
-### 1️⃣ Data Collection
+### 1️ Data Collection
 Data is collected using:
 - **USGS API**
 - **Web scraping** from GEOFON and EMSC using `requests`, `BeautifulSoup`, and `Selenium`
@@ -37,7 +37,7 @@ Generated CSV files:
 
 ---
 
-### 2️⃣ Data Cleaning & Preprocessing (Pandas)
+### 2️ Data Cleaning & Preprocessing (Pandas)
 Performed tasks:
 - Handle missing (`NaN`) values
 - Convert data types to `float` and `datetime`
@@ -50,7 +50,7 @@ Performed tasks:
 
 ---
 
-### 3️⃣ Numerical & Statistical Analysis (NumPy)
+### 3️ Numerical & Statistical Analysis (NumPy)
 Using **NumPy** for:
 - Statistical calculations (`mean`, `std`, `percentile`)
 - Computing **Euclidean distances** from earthquake epicenters to Tokyo
@@ -58,7 +58,7 @@ Using **NumPy** for:
 
 ---
 
-### 4️⃣ SQL Database Integration
+### 4️ SQL Database Integration
 Data is stored in an SQL table named `earthquakes`:
 
 | Column | Description |
