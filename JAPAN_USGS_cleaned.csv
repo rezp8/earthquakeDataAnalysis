@@ -1,4 +1,5 @@
 time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,Month,Category,region,source,dist_to_tokyo_km
+2025-10-17 20:28:15.043,29.7995,139.0908,419.708,4.6,mb,167.0,81.0,3.363,0.72,us,us6000rhyd,2025-10-17 20:46:17.040,"Izu Islands, Japan region",earthquake,8.91,7.45,0.036,235.0,October,Moderate,Izu Islands,USGS,657.34
 2025-10-14 23:29:10.333,30.3762,138.2748,440.542,4.5,mb,59.0,99.0,3.029,0.41,us,us6000rh76,2025-10-15 00:42:51.040,"Izu Islands, Japan region",earthquake,11.38,7.633,0.034,261.0,October,Moderate,Izu Islands,USGS,605.37
 2025-10-14 03:34:24.223,39.605,139.5058,11.325,4.6,mb,59.0,126.0,1.681,0.77,us,us6000rgzf,2025-10-14 05:34:11.866,"51 km SW of Tennō, Japan",earthquake,7.48,4.275,0.08,47.0,October,Moderate,Tennō,USGS,435.69
 2025-10-13 03:25:44.134,38.5931,142.5944,38.354,4.7,mb,39.0,146.0,2.491,0.93,us,us6000rgtf,2025-10-17 17:24:20.495,"92 km SE of Ōfunato, Japan",earthquake,8.05,7.918,0.087,40.0,October,Moderate,Ōfunato,USGS,412.79
@@ -27,7 +28,7 @@ time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,
 2025-09-25 17:01:00.816,30.9515,140.0817,10.041,4.6,mb,66.0,102.0,2.169,0.45,us,us6000rcvr,2025-10-18 19:26:14.040,"Izu Islands, Japan region",earthquake,6.19,3.423,0.079,48.0,September,Moderate,Izu Islands,USGS,528.08
 2025-09-25 00:14:28.992,37.8154,144.1719,10.0,4.6,mb,41.0,100.0,3.825,1.1,us,us6000rcq4,2025-09-25 00:35:55.040,"248 km ESE of Onagawa Chō, Japan",earthquake,9.36,1.899,0.092,35.0,September,Moderate,Onagawa Chō,USGS,463.82
 2025-09-24 18:03:16.297,38.9527,142.1281,55.164,4.6,mb,68.0,141.0,2.009,0.71,us,us6000rcm8,2025-09-24 20:15:49.040,"38 km ESE of Ōfunato, Japan",earthquake,8.72,6.94,0.077,51.0,September,Moderate,Ōfunato,USGS,421.95
-2025-09-23 17:08:15.570,28.7376,128.6955,155.312,4.6,mb,47.0,66.0,1.931,0.99,us,us6000rcd7,2025-09-23 17:48:19.040,"71 km NW of Uken, Japan",earthquake,8.52,8.319,0.083,43.0,September,Moderate,Uken,USGS,1289.94
+2025-09-23 17:08:15.065,28.8164,128.5836,147.312,4.5,mb,45.0,66.0,1.992,0.77,us,us6000rcd7,2025-10-19 15:49:12.040,"85 km NW of Uken, Japan",earthquake,5.41,8.149,0.077,50.0,September,Moderate,Uken,USGS,1292.82
 2025-09-22 21:51:33.799,36.3754,142.6257,10.0,4.5,mb,37.0,135.0,3.564,0.98,us,us6000rc6f,2025-10-15 22:21:27.040,"172 km ESE of Iwaki, Japan",earthquake,8.73,1.906,0.116,22.0,September,Moderate,Iwaki,USGS,274.62
 2025-09-20 21:47:23.395,40.2577,141.8514,46.237,4.4,mb,27.0,147.0,0.801,1.45,us,us6000rgxc,2025-10-18 02:38:04.040,"10 km NE of Kuji, Japan",earthquake,5.99,8.601,0.138,15.0,September,Moderate,Kuji,USGS,542.04
 2025-09-20 11:23:42.761,25.4001,141.1153,147.669,4.6,mb,36.0,118.0,1.942,0.63,us,us6000rgwj,2025-10-16 09:32:43.040,"Volcano Islands, Japan region",earthquake,10.43,7.372,0.078,49.0,September,Moderate,Volcano Islands,USGS,1152.18
