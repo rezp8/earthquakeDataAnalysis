@@ -1,0 +1,121 @@
+# How to run the **Database** part (quick guide for reviewers)
+
+> This project targets **MySQL**. The runner script does everything end-to-end: ensure table → load all CSVs → export results.
+
+---
+
+## 1) Prerequisites
+
+- Python 3.10+ (tested on macOS)
+- MySQL server running locally
+- (Recommended) virtualenv
+
+Install Python deps:
+cd earthquakeDataAnalysis
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+# if you don’t have it, install directly:
+# pip install pandas SQLAlchemy pymysql python-dateutil
+
+Start MySQL (macOS/Homebrew):
+brew services start mysql
+
+> DB credentials are defined in src/engine.py (default: user=`root`, password=`<your-password>`, host=`localhost`, db=`earthquakeDB`).  
+> If needed, edit that file before running.
+
+---
+
+## 2) Create database & table (first time only)
+
+python src/tables.py --db earthquakeDB --user root --password <your-password> --host 127.0.0.1 --port 3306
+
+This:
+- Ensures database `earthquakeDB` exists
+- Creates table `earthquakes` with indexes & UNIQUE constraint
+
+---
+
+## 3) Put your data
+
+Place all cleaned CSV files in:
+src/df/
+
+(You can also pass files/folders explicitly; see advanced usage below.)
+
+---
+
+## 4) Run the pipeline
+
+The main runner will:
+1) ensure table,
+2) load every CSV from src/df/,
+3) export the full table to a CSV,
+4) (optional) run named queries and export each to its own CSV.
+
+### Default (load all CSVs + export full DB)
+python src/main.py
+Outputs:
+- outputs/earthquakes_export.csv (full table snapshot)
+
+### Also export named queries (recommended)
+python src/main.py --run-queries
+Outputs:
+- outputs/earthquakes_export.csv
+- Per-query CSVs under outputs/queries/
+
+Queries are read from src/queries.sql. Each query must be named:
+-- name: daily_counts
+SELECT DATE(time) AS day, COUNT(*) AS total_quakes
+FROM earthquakes
+GROUP BY day
+ORDER BY day;
+
+---
+
+## 5) Advanced usage
+
+Load from a different folder or recursively:
+python src/main.py --dir src/df --pattern "*.csv" --recursive
+
+Run only queries later (no new loads):
+python src/main.py --run-queries
+
+Customize paths:
+python src/main.py --export-path outputs/db_dump.csv \
+                   --queries src/queries.sql \
+                   --queries-out outputs/queries
+
+Pass explicit files/folders:
+python src/main.py src/df/JAPAN_API_cleaned.csv src/df
+
+---
+
+## 6) Troubleshooting
+
+- Cannot connect to MySQL  
+  Edit src/engine.py (user/password/host/db). Ensure MySQL is running and listening on 127.0.0.1:3306.
+
+- Empty query outputs  
+  Ensure src/queries.sql exists and queries use the -- name: <slug> header and end with ;
+
+- Duplicates  
+  A UNIQUE constraint on (source, time, latitude, longitude) prevents obvious duplicates. The loader also drops dupes before insert.
+
+- Reset run (optional)
+mysql -u root -p<your-password> -h 127.0.0.1 -P 3306 \
+  -e "TRUNCATE TABLE earthquakeDB.earthquakes;"
+rm -f outputs/*.csv outputs/queries/*.csv
+
+---
+
+## 7) What reviewers should see
+
+1) Table ensured message in console  
+2) Per-file load logs like [1/4] +118 from src/df/JAPAN_API_cleaned.csv  
+3) outputs/earthquakes_export.csv created  
+4) If --run-queries: multiple CSVs under outputs/queries/ (e.g., daily_counts.csv, heatmap_lat_lon_counts.csv, …)
+
+---
+
+### Notes for maintainers
+- Secrets should not be committed; credentials are currently in src/engine.py for simplicity. For a production setup, switch to environment variables.
