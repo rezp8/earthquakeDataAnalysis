@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 from columns_map import RENAME_MAP as rename_map
 
-df = pd.read_csv("src/df/JAPAN_USGS_cleaned.csv")
+df = pd.read_csv("japan_clean_dataset.csv")
 
 # Apply mapping only for existing columns
 df = df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})

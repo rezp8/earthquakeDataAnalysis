@@ -9,8 +9,8 @@ def get_engine():
 
     user = "root" # نام کاربری MySQL
     password = "@rezp6374" # رمز عبور MySQL
-    host = "localhost" # اگر سرور محلی داری
-    port = 3306 # پورت MySQL
+    host = "localhost" 
+    port = 3306
     database = "earthquakeDB" # نام دیتابیس
 
     # url = f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}?charset=utf8mb4"
