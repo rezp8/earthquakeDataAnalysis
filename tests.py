@@ -1,5 +1,6 @@
 import unittest
 from EMSC_webscraping import webscraping_selenium
+from GEOFON_webscraping import fetch_earthquake_data
 from io import StringIO
 import requests
 from API_saving import api_saving
@@ -7,13 +8,18 @@ import pandas as pd
 
 
 class Test(unittest.TestCase):
-    def test_validate_selenium_results_count(self):
-        events_count, extracted_events_count = webscraping_selenium()
-        self.assertEqual(events_count, extracted_events_count,
-                         f"Our search included {extracted_events_count} events but only {events_count} have been extracted.")
+    def test_selenium_results_count(self):
+        total_events_count, extracted_events_count = webscraping_selenium()
+        self.assertEqual(total_events_count, extracted_events_count,
+                         f"Our search included {extracted_events_count} events but only {total_events_count} have been extracted.")
+
+    def test_beautifulsoup_results_count(self):
+        extracted_events_count, total_events_count = fetch_earthquake_data()
+        self.assertEqual(total_events_count, extracted_events_count,
+                         f"Our search included {extracted_events_count} events but only {total_events_count} have been extracted.")
 
     def test_validate_api_results_count(self):
-        api_saving()  
+        api_saving()
 
         url = "https://earthquake.usgs.gov/fdsnws/event/1/query"
         params = {
