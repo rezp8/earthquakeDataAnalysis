@@ -1,11 +1,13 @@
 import unittest
 from EMSC_webscraping import webscraping_selenium
 from GEOFON_webscraping import fetch_earthquake_data
-import utils
 from io import StringIO
 import requests
 from API_saving import api_saving
 import pandas as pd
+import numpy as np
+from utils import api_code, clean_data, compute_statistics, validate_data_integrity, calculate_distance_to_tokyo, compute_numpy_statistics, count_missing_values
+
 
 
 class Test(unittest.TestCase):
@@ -18,47 +20,74 @@ class Test(unittest.TestCase):
         extracted_events_count, total_events_count = fetch_earthquake_data()
         self.assertEqual(total_events_count, extracted_events_count,
                          f"Our search included {extracted_events_count} events but only {total_events_count} have been extracted.")
-
-    def test_validate_api_results_count(self):
+    def test_api_results_count(self):
         api_saving()
+        df_saved = pd.read_csv("JAPAN_USGS.csv")
+        saved_count = len(df_saved)
+        direct_count = api_code()
+        self.assertEqual(saved_count, direct_count,
+                         f"Our search included {direct_count} events but only {saved_count} have been extracted.")
 
-        url = "https://earthquake.usgs.gov/fdsnws/event/1/query"
-        params = {
-            "format": "csv",
-            "starttime": "2025-09-15",
-            "endtime": "2025-10-15",
-            "minlatitude": 24,
-            "maxlatitude": 46,
-            "minlongitude": 123,
-            "maxlongitude": 146,
-            "minmagnitude": 0
-        }
+    def test_clean_data(self):
+        df = pd.DataFrame({
+            "latitude": [35.0, np.nan, 37.2],
+            "longitude": [138.0, 140.0, np.nan],
+            "mag": [4.5, 5.1, np.nan]
+        })
+        cleaned = clean_data(df)
+        
+        self.assertEqual(cleaned.isna().sum().sum(), 0)
 
-        response = requests.get(url, params=params)
-        response.raise_for_status()
+    def test_compute_statistics(self):
+        df = pd.DataFrame({"magnitude": [4.5, 5.0, 6.0, 7.0]})
+        stats = compute_statistics(df, "magnitude")
+        
+        self.assertEqual(stats["mean"], 5.625)
 
-        df_api = pd.read_csv(StringIO(response.text))
-        api_count = len(df_api)
+    def test_validate_data_integrity(self):
+        df = pd.DataFrame({
+            "latitude": [35.0, 36.0],
+            "longitude": [140.0, 141.0],
+            "mag": [5.2, 6.1]
+        })
+        result = validate_data_integrity(df)
+        
+        self.assertTrue(result)
 
-        df_local = pd.read_csv("japan_earthquakes.csv")
-        local_count = len(df_local)
+    def test_calculate_distance_to_tokyo(self):
+        df = pd.DataFrame({
+            "latitude": [35.0, 36.5],
+            "longitude": [138.0, 140.0],
+            "mag": [4.5, 5.1]
+        })
+        df_with_dist = calculate_distance_to_tokyo(df)
+        
+        self.assertIn("dist_to_tokyo_km", df_with_dist.columns)
 
-        self.assertEqual(
-            api_count, local_count,
-            f"Our search included {api_count} events but only {local_count} have been extracted.")
+    def test_compute_numpy_statistics(self):
+        df = pd.DataFrame({
+            "latitude": [35.0, 36.5],
+            "longitude": [138.0, 140.0],
+            "mag": [4.5, 5.1]
+        })
+        df = calculate_distance_to_tokyo(df)
+        stats = compute_numpy_statistics(df)
+        
+        self.assertIn("mean_mag", stats)
+        self.assertIn("mean_distance", stats)
 
     def test_no_missing_values(self):
         df = pd.DataFrame(
             {"data_source": ["EMSC", "EMSC", "EMSC", "EMSC"], "magnitude_value": ["4", "4.5", "2.3", "0"]})
         expected = {"data_source": 0, "magnitude_value": 0}
-        result = utils.count_missing_values(df)
+        result = count_missing_values()
         self.assertEqual(result, expected)
 
     def test_some_missing_values(self):
         df = pd.DataFrame(
             {"data_source": ["EMSC", None, "EMSC", "EMSC"], "magnitude_value": [None, "4.5", None, "0"]})
         expected = {"data_source": 1, "magnitude_value": 2}
-        result = utils.count_missing_values(df)
+        result = count_missing_values()
         self.assertEqual(result, expected)
 
 
