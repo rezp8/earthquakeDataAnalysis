@@ -1,20 +1,22 @@
 ﻿region,min_depth,max_depth
-BONIN ISLANDS,320.523,504.0
-Southeast of Honshu,442.0,445.0
-IZU ISLANDS,10.0,440.542
+Bonin Islands,320.523,504.0
+Southeast of Honshu,416.0,445.0
+Izu Islands,10.0,440.542
+EASTERN SEA OF JAPAN,300.0,300.0
 Yoshida-kasugachō,185.842,185.842
-NEAR WEST COAST OF HONSHU,10.0,180.0
-Volcano Islands,147.669,147.669
+Near West Coast of Honshu,10.0,180.0
+Volcano Islands,147.669,148.0
 Uken,147.312,147.312
-RYUKYU ISLANDS,0.0,140.0
-Hokkaido,0.0,130.0
+Ryukyu Islands,0.0,140.0
+HOKKAIDO,0.0,130.0
 NEAR S. COAST OF HONSHU,10.0,110.0
 Ichihara,103.237,103.237
-NEAR EAST COAST OF HONSHU,20.0,103.0
+Near East Coast of Honshu,10.0,103.0
 Hiroshima,80.0,80.0
 Ōfunato,38.354,78.59
+Eastern Honshu,10.0,70.0
 Near Aomori,60.1,60.1
-EASTERN HONSHU,10.0,60.0
+SHIKOKU,22.0,60.0
 Urakawa,58.696,58.696
 Southwestern Ryukyu Islands,58.0,58.0
 Yonakuni,57.156,57.156
@@ -28,12 +30,11 @@ Osaka,30.0,45.1
 Tomioka,43.855,43.855
 Fukushima,40.23,40.23
 Tokyo,30.0,40.0
-Shikoku,22.0,40.0
 Kansai,40.0,40.0
 Ōarai,38.872,38.872
 Nagoya,35.2,35.2
 Iwaki,10.0,35.0
-Off East Coast Of Honshu,3.0,35.0
+Off East Coast of Honshu,3.0,35.0
 Hasaki,34.941,34.941
 Yamaguchi,33.0,33.0
 Yokohama,30.0,30.0

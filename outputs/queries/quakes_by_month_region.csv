@@ -1,76 +1,77 @@
 ﻿month,region,total_quakes
-October,NEAR EAST COAST OF HONSHU,18
-October,OFF EAST COAST OF HONSHU,12
-October,RYUKYU ISLANDS,10
-October,Hokkaido,7
+October,Near East Coast of Honshu,19
+October,Off East Coast of Honshu,12
+October,Ryukyu Islands,11
+October,HOKKAIDO,7
 October,Onagawa Chō,6
-October,BONIN ISLANDS,5
-October,IZU ISLANDS,5
-October,NEAR WEST COAST OF HONSHU,4
+October,Izu Islands,6
+October,Bonin Islands,5
+October,Eastern Honshu,5
+October,Near West Coast of Honshu,4
+October,Southeast of Honshu,3
 October,WESTERN HONSHU,3
-October,EASTERN HONSHU,3
-October,Nagoya,2
-October,Ōfunato,2
-October,Southeast of Honshu,2
 October,Tokyo,2
-October,SHIKOKU,1
-October,Katsuura,1
-October,Nagasaki,1
-October,Near Niigata,1
-October,Kanazawa,1
-October,Yamaguchi,1
-October,Kagoshima,1
-October,Kyoto,1
-October,Sendai,1
-October,NEAR S. COAST OF HONSHU,1
-October,Takamatsu,1
-October,Yokohama,1
-October,Oita,1
-October,Kansai,1
-October,"Okinawa, Ryukyu Islands",1
-October,Tennō,1
-October,Urakawa,1
-October,SOUTHWESTERN RYUKYU ISL.,1
-October,Tatsugō,1
-October,Namie,1
-October,Tomioka,1
+October,Ōfunato,2
+October,Nagoya,2
+October,SHIKOKU,2
+October,EASTERN SEA OF JAPAN,1
 October,Miyako,1
+October,Kansai,1
+October,Oita,1
+October,Yokohama,1
+October,Takamatsu,1
+October,"Okinawa, Ryukyu Islands",1
+October,Sendai,1
+October,Tennō,1
+October,Kyoto,1
+October,Kagoshima,1
+October,Yamaguchi,1
+October,Kanazawa,1
+October,Near Niigata,1
+October,Nagasaki,1
+October,Urakawa,1
+October,NEAR S. COAST OF HONSHU,1
+October,Katsuura,1
 October,Ichihara,1
+October,Namie,1
 October,Osaka,1
-September,RYUKYU ISLANDS,30
-September,NEAR EAST COAST OF HONSHU,16
-September,Off East Coast Of Honshu,10
-September,BONIN ISLANDS,6
-September,Onagawa Chō,6
+October,SOUTHWESTERN RYUKYU ISL.,1
+October,Tomioka,1
+October,Tatsugō,1
+September,Ryukyu Islands,30
+September,Near East Coast of Honshu,16
+September,Off East Coast of Honshu,10
 September,KYUSHU,6
+September,Onagawa Chō,6
+September,Bonin Islands,6
 September,NEAR S. COAST OF HONSHU,4
-September,IZU ISLANDS,3
+September,Izu Islands,3
 September,Kurio,3
 September,EASTERN HONSHU,3
+September,HOKKAIDO,2
 September,NEAR WEST COAST OF HONSHU,2
-September,Shikoku,2
 September,Iwaki,2
-September,Hokkaido,2
 September,Tokyo,2
-September,Sea Of Japan,1
-September,Sendai,1
+September,Volcano Islands,2
+September,SHIKOKU,2
+September,Southwestern Ryukyu Islands,1
 September,Yokohama,1
-September,Osaka,1
-September,Fukushima,1
 September,"Okinawa, Ryukyu Islands",1
-September,Fukuoka,1
 September,Near Aomori,1
+September,Sea Of Japan,1
 September,Hiroshima,1
+September,SOUTHWESTERN RYUKYU ISL.,1
+September,Sendai,1
+September,Osaka,1
 September,Yonakuni,1
 September,Ōfunato,1
-September,Uken,1
-September,Southwestern Ryukyu Islands,1
-September,Kuji,1
-September,Volcano Islands,1
-September,Miyakojima,1
-September,Ōarai,1
-September,Hasaki,1
-September,SOUTHWESTERN RYUKYU ISL.,1
-September,Shimoda,1
-September,Yamada,1
 September,Yoshida-kasugachō,1
+September,Yamada,1
+September,Shimoda,1
+September,Hasaki,1
+September,Ōarai,1
+September,Miyakojima,1
+September,Fukushima,1
+September,Kuji,1
+September,Fukuoka,1
+September,Uken,1
