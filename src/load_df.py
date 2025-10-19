@@ -2,10 +2,8 @@ import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
 
-# Read CSV file
-df = pd.read_csv("JAPAN_API_cleaned.csv")
+df = pd.read_csv("src/df/JAPAN_GEOFON_cleaned.csv")
 
-# normalize to DB schema (mapping)
 rename_map = {
     # time
     "Datetime": "time",
@@ -37,6 +35,7 @@ rename_map = {
     "Place": "place",
     "place": "place",
     # distance to Tokyo
+    "dist_to_tokyo_km": "dist_to_Tokyo",
     "dist_to_Tokyo_km": "dist_to_Tokyo",
     "Dist_to_Tokyo_km": "dist_to_Tokyo",
     # source
@@ -60,7 +59,6 @@ df["time"] = pd.to_datetime(df["time"], utc=True, errors="coerce").dt.tz_convert
 for c in ["latitude","longitude","depth","magnitude","dist_to_Tokyo"]:
     df[c] = pd.to_numeric(df[c], errors="coerce")
 
-# keep the month values exactly as they appear in CSV
 df["month"] = df["month"]
 
 # حذف سطرهای ناقص کلیدی
