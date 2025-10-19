@@ -1,0 +1,68 @@
+﻿region,source,avg_magnitude,total_quakes
+Tomioka,USGS,5.9,1
+Tokyo,DATASET,5.4,4
+Tatsugō,USGS,5.3,1
+Yamaguchi,DATASET,5.3,1
+Osaka,DATASET,5.15,2
+Namie,USGS,5.1,1
+Off East Coast Of Honshu,DATASET,5.1,1
+Yokohama,DATASET,5.0,2
+Near Aomori,DATASET,5.0,1
+Hiroshima,DATASET,5.0,1
+Nagasaki,DATASET,4.9,1
+Ryukyu Islands,GEOFON,4.9,6
+Fukuoka,DATASET,4.9,1
+Shikoku,DATASET,4.9,1
+Hokkaido,DATASET,4.8,2
+Nagoya,DATASET,4.8,2
+Southwestern Ryukyu Islands,GEOFON,4.8,1
+Kurio,USGS,4.8,3
+Near West Coast of Honshu,GEOFON,4.8,1
+Miyakojima,USGS,4.8,1
+Off East Coast of Honshu,GEOFON,4.79,7
+Near East Coast of Honshu,GEOFON,4.73,7
+"Okinawa, Ryukyu Islands",DATASET,4.7,2
+Ōfunato,USGS,4.7,3
+Kagoshima,DATASET,4.7,1
+Southeast of Honshu,GEOFON,4.7,2
+Onagawa Chō,USGS,4.64,12
+OFF EAST COAST OF HONSHU,EMSC,4.62,14
+Izu Islands,USGS,4.62,4
+Ōarai,USGS,4.6,1
+Volcano Islands,USGS,4.6,1
+Kansai,DATASET,4.6,1
+Fukushima,DATASET,4.6,1
+Near Niigata,DATASET,4.6,1
+Tennō,USGS,4.6,1
+Uken,USGS,4.5,1
+Yonakuni,USGS,4.5,1
+Katsuura,USGS,4.5,1
+Ichihara,USGS,4.5,1
+Hasaki,USGS,4.5,1
+Bonin Islands,GEOFON,4.5,1
+Miyako,USGS,4.5,1
+Sea Of Japan,DATASET,4.5,1
+IZU ISLANDS,EMSC,4.47,4
+Sendai,DATASET,4.45,2
+Shimoda,USGS,4.4,1
+Yamada,USGS,4.4,1
+Kyoto,DATASET,4.4,1
+Kuji,USGS,4.4,1
+Iwaki,USGS,4.35,2
+Yoshida-kasugachō,USGS,4.3,1
+Urakawa,USGS,4.3,1
+Oita,DATASET,4.3,1
+Kanazawa,DATASET,4.2,1
+Bonin Islands,USGS,4.1,5
+BONIN ISLANDS,EMSC,4.1,5
+NEAR EAST COAST OF HONSHU,EMSC,4.1,27
+SOUTHWESTERN RYUKYU ISL.,EMSC,4.0,2
+Takamatsu,DATASET,4.0,1
+NEAR WEST COAST OF HONSHU,EMSC,3.84,5
+NEAR S. COAST OF HONSHU,EMSC,3.7,5
+HOKKAIDO,EMSC,3.69,7
+RYUKYU ISLANDS,EMSC,3.61,34
+KYUSHU,EMSC,3.4,6
+SHIKOKU,EMSC,3.3,2
+EASTERN HONSHU,EMSC,3.25,6
+WESTERN HONSHU,EMSC,3.17,3

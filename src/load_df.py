@@ -1,67 +1,28 @@
 import pandas as pd
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL
+import os
+from columns_map import RENAME_MAP as rename_map
 
-df = pd.read_csv("src/df/JAPAN_GEOFON_cleaned.csv")
+df = pd.read_csv("src/df/JAPAN_USGS_cleaned.csv")
 
-rename_map = {
-    # time
-    "Datetime": "time",
-    "date_time_UTC": "time",
-    "DateTime_UTC": "time",
-    "time_utc": "time",
-    "time": "time",
-    # month
-    "Month": "month",
-    # latitude
-    "Latitude": "latitude",
-    "latitude_deg": "latitude",
-    "lat": "latitude",
-    # longitude
-    "Longitude": "longitude",
-    "longitude_deg": "longitude",
-    "lon": "longitude",
-    # depth
-    "Depth": "depth",
-    "depth_km": "depth",
-    "Depth_km": "depth",
-    # magnitude
-    "Magnitude": "magnitude",
-    "magnitude_value": "magnitude",
-    "mag": "magnitude",
-    # region
-    "Region": "region",
-    "region": "region",
-    "Place": "place",
-    "place": "place",
-    # distance to Tokyo
-    "dist_to_tokyo_km": "dist_to_Tokyo",
-    "dist_to_Tokyo_km": "dist_to_Tokyo",
-    "Dist_to_Tokyo_km": "dist_to_Tokyo",
-    # source
-    "Data_source": "source",
-    "data_source": "source",
-    # category
-    "Category": "category"
-}
-
-# اعمال نگاشت فقط برای ستون‌های موجود
+# Apply mapping only for existing columns
 df = df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})
 
-# ستون‌های ضروری را اگر نبودند، بساز (برای جلوگیری از خطا در to_sql)
+# Create necessary columns if they do not exist (to prevent errors in to_sql)
 needed = ["source","time","month","category","latitude","longitude","depth","magnitude","region","dist_to_Tokyo"]
 for c in needed:
     if c not in df.columns:
         df[c] = None
 
-# نوع‌ها: زمان و عددی‌ها
+# Types: time and numerics
 df["time"] = pd.to_datetime(df["time"], utc=True, errors="coerce").dt.tz_convert(None)
 for c in ["latitude","longitude","depth","magnitude","dist_to_Tokyo"]:
     df[c] = pd.to_numeric(df[c], errors="coerce")
 
 df["month"] = df["month"]
 
-# حذف سطرهای ناقص کلیدی
+# Drop rows with missing key values
 df = df.dropna(subset=["time","latitude","longitude"])
 
 df = df[["source","time","month","category","latitude","longitude","depth","magnitude","region","dist_to_Tokyo"]]
@@ -78,7 +39,7 @@ url = URL.create(
 )
 engine = create_engine(url)
 
-# Insert data into SQL table
+# Insert data
 df.to_sql(
     name = "earthquakes",
     con = engine,

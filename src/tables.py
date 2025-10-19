@@ -1,3 +1,6 @@
+'''
+python src/tables.py --db earthquakeDB --user root --password @rezp6374 --host 127.0.0.1 --port 3306
+'''
 import argparse
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
