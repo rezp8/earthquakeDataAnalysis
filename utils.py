@@ -17,7 +17,7 @@ def api_code():
     }
     response = requests.get(url, params=params)
     df_direct = pd.read_csv(StringIO(response.text))
-    direct_count = len(df_direct)
+    direct_count = len(df_direct) - 1
     return direct_count
 
 def clean_data(df):

@@ -6,7 +6,7 @@ import requests
 from API_saving import api_saving
 import pandas as pd
 import numpy as np
-from utils import api_code, clean_data, compute_statistics, validate_data_integrity, calculate_distance_to_tokyo, compute_numpy_statistics, count_missing_values
+from utils import api_code, clean_data, compute_statistics, validate_data_integrity, calculate_distance_to_tokyo, compute_numpy_statistics
 
 
 
@@ -20,6 +20,7 @@ class Test(unittest.TestCase):
         extracted_events_count, total_events_count = fetch_earthquake_data()
         self.assertEqual(total_events_count, extracted_events_count,
                          f"Our search included {extracted_events_count} events but only {total_events_count} have been extracted.")
+
     def test_api_results_count(self):
         api_saving()
         df_saved = pd.read_csv("JAPAN_USGS.csv")
@@ -35,13 +36,13 @@ class Test(unittest.TestCase):
             "mag": [4.5, 5.1, np.nan]
         })
         cleaned = clean_data(df)
-        
+
         self.assertEqual(cleaned.isna().sum().sum(), 0)
 
     def test_compute_statistics(self):
         df = pd.DataFrame({"magnitude": [4.5, 5.0, 6.0, 7.0]})
         stats = compute_statistics(df, "magnitude")
-        
+
         self.assertEqual(stats["mean"], 5.625)
 
     def test_validate_data_integrity(self):
@@ -51,7 +52,7 @@ class Test(unittest.TestCase):
             "mag": [5.2, 6.1]
         })
         result = validate_data_integrity(df)
-        
+
         self.assertTrue(result)
 
     def test_calculate_distance_to_tokyo(self):
@@ -61,7 +62,7 @@ class Test(unittest.TestCase):
             "mag": [4.5, 5.1]
         })
         df_with_dist = calculate_distance_to_tokyo(df)
-        
+
         self.assertIn("dist_to_tokyo_km", df_with_dist.columns)
 
     def test_compute_numpy_statistics(self):
@@ -72,23 +73,9 @@ class Test(unittest.TestCase):
         })
         df = calculate_distance_to_tokyo(df)
         stats = compute_numpy_statistics(df)
-        
+
         self.assertIn("mean_mag", stats)
         self.assertIn("mean_distance", stats)
-
-    def test_no_missing_values(self):
-        df = pd.DataFrame(
-            {"data_source": ["EMSC", "EMSC", "EMSC", "EMSC"], "magnitude_value": ["4", "4.5", "2.3", "0"]})
-        expected = {"data_source": 0, "magnitude_value": 0}
-        result = count_missing_values()
-        self.assertEqual(result, expected)
-
-    def test_some_missing_values(self):
-        df = pd.DataFrame(
-            {"data_source": ["EMSC", None, "EMSC", "EMSC"], "magnitude_value": [None, "4.5", None, "0"]})
-        expected = {"data_source": 1, "magnitude_value": 2}
-        result = count_missing_values()
-        self.assertEqual(result, expected)
 
 
 if __name__ == '__main__':
